@@ -46,9 +46,18 @@ m.grid(column=1,row=4)
 f2=ttk.Frame(struc)
 f2.grid(column=1,row=0)
 
+#Bottones
 b1=ttk.Radiobutton(f2,text="Estudiante",padding="25 0 0 10").grid(column=0,row=0,sticky=W)
 b2=ttk.Radiobutton(f2,text="Empleado",padding="25 0 0 10").grid(column=0,row=1,sticky=W)
 b3=ttk.Radiobutton(f2,text="Desempldeado",padding="25 0 0 10").grid(column=0,row=2,sticky=W)
 
 #3er frame
+f3=ttk.Frame(struc,padding="30 25 0 10")
+f3.grid(column=0,row=1)
+
+ttk.Label(f3,text="Aficiones:").grid(column=0,row=0,sticky=W)
+
+ttk.Checkbutton(f3,text="Leer",padding="0 5 20 0").grid(column=0,row=1)
+ttk.Checkbutton(f3,text="Musica",padding="0 5 20 0").grid(column=1,row=1)
+ttk.Checkbutton(f3,text="Videojuegos",padding="0 5 20 0").grid(column=2,row=1)
 rut.mainloop()
