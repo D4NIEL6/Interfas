@@ -42,4 +42,13 @@ ttk.Label(f1, text="Movil:",padding="0 0 20 0").grid(column=0,row=4,sticky=W)
 m=ttk.Entry(f1,width=25)
 m.grid(column=1,row=4)
 
+#2do frame
+f2=ttk.Frame(struc)
+f2.grid(column=1,row=0)
+
+b1=ttk.Radiobutton(f2,text="Estudiante",padding="25 0 0 10").grid(column=0,row=0,sticky=W)
+b2=ttk.Radiobutton(f2,text="Empleado",padding="25 0 0 10").grid(column=0,row=1,sticky=W)
+b3=ttk.Radiobutton(f2,text="Desempldeado",padding="25 0 0 10").grid(column=0,row=2,sticky=W)
+
+#3er frame
 rut.mainloop()
