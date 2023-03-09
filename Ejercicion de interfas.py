@@ -57,7 +57,17 @@ f3.grid(column=0,row=1)
 
 ttk.Label(f3,text="Aficiones:").grid(column=0,row=0,sticky=W)
 
-ttk.Checkbutton(f3,text="Leer",padding="0 5 20 0").grid(column=0,row=1)
-ttk.Checkbutton(f3,text="Musica",padding="0 5 20 0").grid(column=1,row=1)
-ttk.Checkbutton(f3,text="Videojuegos",padding="0 5 20 0").grid(column=2,row=1)
+cb1=ttk.Checkbutton(f3,text="Leer",padding="0 5 20 0").grid(column=0,row=1)
+cb2=ttk.Checkbutton(f3,text="Musica",padding="0 5 20 0").grid(column=1,row=1)
+cb3=ttk.Checkbutton(f3,text="Videojuegos",padding="0 5 20 0").grid(column=2,row=1)
+
+#4to frame
+
+#5to frame
+f5=ttk.Frame(struc)
+f5.grid(column=0,row=2)
+b1=ttk.Button(f5,text="Guardar").grid(column=0,row=0)
+b2=ttk.Button(f5,text="Cancelar").grid(column=1,row=0)
+
+
 rut.mainloop()
