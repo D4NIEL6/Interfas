@@ -15,32 +15,32 @@ struc.grid(column=0,row=0)
 #1er freame 
 
 f1=ttk.Frame(struc,padding="5 5 5 5")
-f1.grid(column=0,row=0)
+f1.grid(column=0,row=0,padx=10,pady=10)
 
 #Nombre 
-ttk.Label(f1, text="Nombre:",padding="0 0 20 0").grid(column=0,row=0,sticky=W)
+ttk.Label(f1, text="Nombre:",padding="0 0 20 20").grid(column=0,row=0,sticky=W)
 nom=ttk.Entry(f1,width=25)
-nom.grid(column=1,row=0)
+nom.grid(column=1,row=0,sticky=W+N)
 
 #A paterno
-ttk.Label(f1, text="A Paterno:",padding="0 0 20 0").grid(column=0,row=1,sticky=W)
+ttk.Label(f1, text="A Paterno:",padding="0 0 20 20").grid(column=0,row=1,sticky=W)
 ap=ttk.Entry(f1,width=25)
-ap.grid(column=1,row=1)
+ap.grid(column=1,row=1,sticky=W+N)
 
 #A materno 
-ttk.Label(f1, text="A Mateno:",padding="0 0 20 0").grid(column=0,row=2,sticky=W)
+ttk.Label(f1, text="A Mateno:",padding="0 0 20 20").grid(column=0,row=2,sticky=W)
 am=ttk.Entry(f1,width=25)
-am.grid(column=1,row=2)
+am.grid(column=1,row=2,sticky=W+N)
 
 #Correo
-ttk.Label(f1, text="Correo:",padding="0 0 20 0").grid(column=0,row=3,sticky=W)
+ttk.Label(f1, text="Correo:",padding="0 0 20 20").grid(column=0,row=3,sticky=W)
 c=ttk.Entry(f1,width=25)
-c.grid(column=1,row=3)
+c.grid(column=1,row=3,sticky=W+N)
 
 #Movil
-ttk.Label(f1, text="Movil:",padding="0 0 20 0").grid(column=0,row=4,sticky=W)
+ttk.Label(f1, text="Movil:",padding="0 0 20 20").grid(column=0,row=4,sticky=W)
 m=ttk.Entry(f1,width=25)
-m.grid(column=1,row=4)
+m.grid(column=1,row=4,sticky=W+N)
 
 #2do frame
 f2=ttk.Frame(struc)
@@ -61,7 +61,12 @@ cb1=ttk.Checkbutton(f3,text="Leer",padding="0 5 20 0").grid(column=0,row=1)
 cb2=ttk.Checkbutton(f3,text="Musica",padding="0 5 20 0").grid(column=1,row=1)
 cb3=ttk.Checkbutton(f3,text="Videojuegos",padding="0 5 20 0").grid(column=2,row=1)
 
-#4to frame
+#struct 
+estado=StringVar
+es=ttk.Combobox(struc,textvariable=estado)
+es.grid(column=1,row=1)
+es['values']=("Jalisco", "Nayarit", "Colima", "Michocan")
+
 
 #5to frame
 f5=ttk.Frame(struc)
