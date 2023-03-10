@@ -46,20 +46,23 @@ m.grid(column=1,row=4,sticky=W+N)
 f2=ttk.Frame(struc)
 f2.grid(column=1,row=0)
 
+ac=StringVar()
 #Bottones
-b1=ttk.Radiobutton(f2,text="Estudiante",padding="25 0 0 10").grid(column=0,row=0,sticky=W)
-b2=ttk.Radiobutton(f2,text="Empleado",padding="25 0 0 10").grid(column=0,row=1,sticky=W)
-b3=ttk.Radiobutton(f2,text="Desempldeado",padding="25 0 0 10").grid(column=0,row=2,sticky=W)
+b1=ttk.Radiobutton(f2,text="Estudiante",padding="25 0 0 10",variable=ac,value='b1').grid(column=0,row=0,sticky=W)
+b2=ttk.Radiobutton(f2,text="Empleado",padding="25 0 0 10",variable=ac,value='b2').grid(column=0,row=1,sticky=W)
+b3=ttk.Radiobutton(f2,text="Desempldeado",padding="25 0 0 10",variable=ac,value='b3').grid(column=0,row=2,sticky=W)
 
 #3er frame
 f3=ttk.Frame(struc,padding="30 25 0 10")
 f3.grid(column=0,row=1)
 
+af=StringVar()
+
 ttk.Label(f3,text="Aficiones:").grid(column=0,row=0,sticky=W)
 
-cb1=ttk.Checkbutton(f3,text="Leer",padding="0 5 20 0").grid(column=0,row=1)
-cb2=ttk.Checkbutton(f3,text="Musica",padding="0 5 20 0").grid(column=1,row=1)
-cb3=ttk.Checkbutton(f3,text="Videojuegos",padding="0 5 20 0").grid(column=2,row=1)
+cb1=ttk.Checkbutton(f3,text="Leer",padding="0 5 20 0",variable=af,onvalue='Musica'+'Videojuegos').grid(column=0,row=1)
+cb2=ttk.Checkbutton(f3,text="Musica",padding="0 5 20 0",variable=af,onvalue='Leer'+'Videojuegos').grid(column=1,row=1)
+cb3=ttk.Checkbutton(f3,text="Videojuegos",padding="0 5 20 0",variable=af,onvalue='Leer'+'Musica').grid(column=2,row=1)
 
 #struct 
 estado=StringVar
@@ -71,7 +74,7 @@ es['values']=("Jalisco", "Nayarit", "Colima", "Michocan")
 #5to frame
 f5=ttk.Frame(struc)
 f5.grid(column=0,row=2)
-b1=ttk.Button(f5,text="Guardar").grid(column=0,row=0)
+b1=ttk.Button(f5,text="Guardar",).grid(column=0,row=0)
 b2=ttk.Button(f5,text="Cancelar").grid(column=1,row=0)
 
 
